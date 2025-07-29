@@ -1,3 +1,5 @@
+// social.js
+
 document.addEventListener("DOMContentLoaded", function () {
     const socialLinks = document.querySelectorAll(".social-link");
 
@@ -19,11 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
             defaults: { duration: 0.3, ease: "power2.out" },
         });
 
+        // Use the link's specific hover color if defined in CSS
         hoverTimeline.to(link, {
             scale: 1.2,
             rotate: 5,
             boxShadow: "var(--social-shadow) 0px 4px 8px",
-            color: "var(--social-hover-color)",
         });
 
         // Hover events
