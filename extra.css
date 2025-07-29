@@ -1,0 +1,48 @@
+/* extra.css */
+
+/* Ensure new nav items match the existing navigation style */
+.nav li a[href="https://cafe.rayhan.codes"],
+.nav li a[href="https://music.rayhan.codes"] {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: var(--text-color, #ffffff); /* Fallback to white, assuming dark theme */
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Icon styling for Read Blog and Explore Music */
+.nav li a[href="https://cafe.rayhan.codes"] i.fa-blog,
+.nav li a[href="https://music.rayhan.codes"] i.fa-music {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Hover effect for new nav items */
+.nav li a[href="https://cafe.rayhan.codes"]:hover,
+.nav li a[href="https://music.rayhan.codes"]:hover {
+    color: var(--accent-color, #e84949); /* Matches theme accent color, adjust as needed */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+}
+
+/* Active state for new nav items (optional, if you want to highlight when visited) */
+.nav li a[href="https://cafe.rayhan.codes"].active,
+.nav li a[href="https://music.rayhan.codes"].active {
+    color: var(--accent-color, #e84949);
+    font-weight: 600;
+}
+
+/* Responsive adjustments for mobile view */
+@media (max-width: 767px) {
+    .nav li a[href="https://cafe.rayhan.codes"],
+    .nav li a[href="https://music.rayhan.codes"] {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .nav li a[href="https://cafe.rayhan.codes"] i.fa-blog,
+    .nav li a[href="https://music.rayhan.codes"] i.fa-music {
+        font-size: 16px;
+    }
+}
