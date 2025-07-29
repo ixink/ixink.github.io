@@ -1,14 +1,16 @@
+/* social.css */
+
 :root {
     --social-bg: #ffffff;
     --social-color: #333333;
-    --social-hover-color: #007bff;
+    --social-hover-color: #007bff; /* Default hover color */
     --social-shadow: rgba(0, 0, 0, 0.15);
 }
 
 body.dark {
     --social-bg: #121212;
     --social-color: #e0e0e0;
-    --social-hover-color: #4dabf7;
+    --social-hover-color: #4dabf7; /* Default hover color for dark mode */
     --social-shadow: rgba(0, 0, 0, 0.3);
 }
 
@@ -40,6 +42,19 @@ body.dark {
     background: var(--social-bg);
     color: var(--social-hover-color);
     box-shadow: var(--social-shadow) 0px 4px 8px;
+}
+
+/* Specific hover colors for Dribbble and X */
+.social-link[href*="dribbble.com"]:hover {
+    color: #ea4c89; /* Dribbble pink */
+}
+
+.social-link[href*="x.com"]:hover {
+    color: #ffffff; /* X white (or black in light mode) */
+}
+
+body.dark .social-link[href*="x.com"]:hover {
+    color: #ffffff; /* Ensure white in dark mode for X */
 }
 
 @media (max-width: 768px) {
